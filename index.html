@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagonal ABA Boxes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 100px;
+    }
+
+    .container {
+      position: relative;
+      width: 700px;
+      height: 700px;
+      margin: auto;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 5px solid #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: absolute;
+    }
+
+    /* Box A (top-left) */
+    .box1 {
+      top: 0;
+      left: 0;
+    }
+
+    /* Box B (diagonal offset) */
+    .box2 {
+      top: 205px; /* box height + border offset */
+      left: 205px;
+    }
+
+    /* Box A again (back to left, below B for ABA feel) */
+    .box3 {
+      top: 410px;  /* twice box height + borders */
+      left: 0;
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box box1">
+      <img src="https://i.pinimg.com/1200x/e7/78/34/e778346d5d6ace6c7c3f8e6cbbdd9345.jpg" alt="Image 1">
+    </div>
+
+    <div class="box box2">
+      <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80" alt="Image 2">
+    </div>
+
+    <div class="box box3">
+      <img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg" alt="Image 3">
+    </div>
+  </div>
+
+</body>
+</html>
